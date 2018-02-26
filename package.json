@@ -184,7 +184,7 @@
       ]
     }
   },
-  "homepage": "https://github.com/jcubic/open-source-library#readme",
+  "homepage": "https://jcubic.github.io/open-source-library/",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
