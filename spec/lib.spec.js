@@ -7,7 +7,7 @@
  */
 /* global require, expect, describe, it */
 
-import {foo,bar} from '../src/main';
+import {foo, bar} from '../src/main';
 
 describe('foo', function() {
     it('should return string "foo"', function() {
