@@ -7,7 +7,7 @@
  */
 /* global require, expect, describe, it */
 
-var {foo, bar} = require('../src/lib');
+import {foo,bar} from '../src/main';
 
 describe('foo', function() {
     it('should return string "foo"', function() {
