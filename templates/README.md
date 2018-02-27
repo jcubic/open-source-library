@@ -7,17 +7,40 @@ Template for JavaScript Open Source Library - version {{VER}}
 
 ## Installation
 
+You can use the library from the browser by including:
+
+```html
+<script src="https://rawgit.com/jcubic/open-source-library/master/dist/lib.min.js"></script>
+```
+
+or
+
+```html
+<script src="https://unpkg.com/open-source-library"></script>
+```
+
+or install from npm:
+
 ```
 npm install open-source-library
 ```
 
 ## Usage
 
+from node or using modules:
+
 ```javascript
 var {foo, bar} = require('open-source-lbrary');
 
 console.log(foo('lorem'));
 console.log(bar('ipsum'));
+```
+
+or in the browser
+
+```javascript
+lib.foo('lorem');
+lib.bar('ipsum');
 ```
 
 ## License
