@@ -6,6 +6,31 @@
   <body>
     <h1>Template for Open Source Library</h1>
     <section>
+      <header><h2>Installation</h2></header>
+      <p>From npm:</p>
+      <pre>
+npm install open-source-library
+      </pre>
+      <p>If you want to use it from node:</p>
+      <pre>
+var {foo, bar} = require('open-source-lbrary');
+
+console.log(foo('lorem'));
+console.log(bar('ipsum'));
+      </pre>
+      <p>If you want to use it from browser you can also use npm or get the file from raw git or unpkg.com:</p>
+      <pre>
+&lt;script src="https://rawgit.com/jcubic/open-source-library/master/dist/lib.min.js"&gt;&lt;/script&gt;
+<!-- or -->
+&lt;script src="https://unpkg.com/open-source-library"&gt;&lt;/script&gt;
+      </pre>
+      <p>Then in your code you can use <code>lib</code> namespace:</p>
+      <pre>
+lib.foo('lorem');
+lib.bar('ipsum');
+      </pre>
+    </section>
+    <section>
       <header><h2>License</h2></header>
       <p>Released under <a href="http://opensource.org/licenses/MIT">MIT</a> license</p>
       <p>Copyright (c) 2018 <a href="http://jcubic.pl/jakub-jankiewicz">Jakub Jankiewicz</a></p>
