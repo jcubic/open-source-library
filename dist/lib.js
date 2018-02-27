@@ -1,10 +1,10 @@
 /**@license
- * Open Source Library - version 0.1.0
+ * Open Source Library - version 0.2.0
  *
  * Copyright (c) 2018 Jakub Jankiewicz <https://jcubic.pl/me>
  * Released under the MIT license
  *
- * build: Tue, 27 Feb 2018 07:56:31 +0000
+ * build: Tue, 27 Feb 2018 08:04:08 +0000
  */
 'use strict';
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -18,7 +18,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
   function bar(arg) {
     return arg === undefined ? ['bar'] : [arg, 'bar'];
   }
-  var version = '0.1.0';
+  var version = '0.2.0';
   exports.version = version;
   exports.foo = foo;
   exports.bar = bar;

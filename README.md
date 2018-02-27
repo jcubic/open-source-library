@@ -1,7 +1,7 @@
 ## open-source-library
-Template for JavaScript Open Source Library - version 0.1.0
+Template for JavaScript Open Source Library - version 0.2.0
 
-[![npm](https://img.shields.io/badge/npm-0.1.0-blue.svg)](https://www.npmjs.com/package/open-source-library)
+[![npm](https://img.shields.io/badge/npm-0.2.0-blue.svg)](https://www.npmjs.com/package/open-source-library)
 [![travis](https://travis-ci.org/jcubic/open-source-library.svg?branch=master)](https://travis-ci.org/jcubic/open-source-library)
 [![Coverage Status](https://coveralls.io/repos/github/jcubic/open-source-library/badge.svg?branch=master)](https://coveralls.io/github/jcubic/open-source-library?branch=master)
 

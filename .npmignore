@@ -1,3 +1,7 @@
 spec
 *~
 Makefile
+jest.config.js
+coverage
+templates
+version
