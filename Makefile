@@ -4,13 +4,14 @@ VERSION=0.2.0
 BRANCH=`git branch | grep '^*' | sed 's/* //'`
 DATE=`date -uR`
 SPEC_CHECKSUM=`md5sum spec/lib.spec.js | cut -d' ' -f 1`
-COMMIT=`git log -n 1 | grep commit | sed 's/commit //'`
+COMMIT=`git log -n 1 | grep commit | sed 's/commit //' | tr -d '\n'`
 
 GIT=git
 SED=sed
 CAT=cat
 RM=rm
 TEST=test
+NPM=npm
 ESLINT=./node_modules/.bin/eslint
 COVERALLS=./node_modules/.bin/coveralls
 JEST=./node_modules/.bin/jest
@@ -40,7 +41,7 @@ Makefile: templates/Makefile
 package.json: templates/package.json .$(VERSION)
 	$(SED) -e "s/{{VER}}/"$(VERSION)"/" templates/package.json > package.json
 
-README.md: templates/README.md
+README.md: templates/README.md .$(VERSION)
 	$(GIT) branch | grep '* devel' > /dev/null && $(SED) -e "s/{{VER}}/DEV/g" -e \
 	"s/{{BRANCH}}/$(BRANCH)/g" -e "s/{{CHECKSUM}}/$(SPEC_CHECKSUM)/g" \
 	-e "s/{{COMMIT}}/$(COMMIT)/g" < templates/README.md > README.md || \
@@ -51,13 +52,13 @@ README.md: templates/README.md
 	touch .$(VERSION)
 
 publish:
-	npm publish --access=public
+	$(NPM) publish --access=public
 
 test:
 	$(JEST)
 
 coveralls:
-	cat ./coverage/lcov.info | $(COVERALLS)
+	$(CAT) ./coverage/lcov.info | $(COVERALLS)
 
 lint:
 	$(ESLINT) src/lib.js spec/lib.spec.js

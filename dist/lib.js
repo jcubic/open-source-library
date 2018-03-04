@@ -4,7 +4,7 @@
  * Copyright (c) 2018 Jakub Jankiewicz <https://jcubic.pl/me>
  * Released under the MIT license
  *
- * build: Tue, 27 Feb 2018 08:04:08 +0000
+ * build: Sun, 04 Mar 2018 08:50:06 +0000
  */
 'use strict';
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
