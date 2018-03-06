@@ -2,7 +2,7 @@
 Template for JavaScript Open Source Library - version 0.2.0
 
 [![npm](https://img.shields.io/badge/npm-0.2.0-blue.svg)](https://www.npmjs.com/package/open-source-library)
-[![travis](https://travis-ci.org/jcubic/open-source-library.svg?branch=master&7c0c70f5322ec8bfb5b400653f69da250bb21653    Add hash to build badge in README)](https://travis-ci.org/jcubic/open-source-library)
+[![travis](https://travis-ci.org/jcubic/open-source-library.svg?branch=master&a3eba2b85babc4c0651488b3921a800f1205bdf7)](https://travis-ci.org/jcubic/open-source-library)
 [![Coverage Status](https://coveralls.io/repos/github/jcubic/open-source-library/badge.svg?branch=master&660e5e44e99a7b6966c46a7869d0b09d)](https://coveralls.io/github/jcubic/open-source-library?branch=master)
 
 ## Installation
