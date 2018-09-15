@@ -187,7 +187,6 @@
   "homepage": "https://jcubic.github.io/open-source-library/",
   "devDependencies": {
     "@babel/core": "^7.0.1",
-    "@babel/plugin-external-helpers": "^7.0.0",
     "@babel/plugin-transform-async-to-generator": "^7.0.0",
     "@babel/plugin-transform-runtime": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
@@ -202,7 +201,6 @@
     "rollup-plugin-babel": "^4.0.3",
     "rollup-plugin-commonjs": "^9.1.6",
     "rollup-plugin-node-resolve": "^3.4.0",
-    "rollup-plugin-replace": "^2.0.0",
     "uglify-js": "^3.3.12"
   }
 }
