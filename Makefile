@@ -1,6 +1,6 @@
 .PHONY: publish test coveralls lint
 
-VERSION=0.3.1
+VERSION=0.3.2
 BRANCH=`git branch | grep '^*' | sed 's/* //'`
 DATE=`date -uR`
 SPEC_CHECKSUM=`md5sum spec/lib.spec.js | cut -d' ' -f 1`
@@ -24,7 +24,7 @@ ALL: Makefile .$(VERSION) dist/lib.js dist/cjs.js dist/lib.min.js README.md pack
 
 
 
-dist/cjs.js: src/main.js .$(VERSION) rollup.config.js
+dist/cjs.js: src/main.js .$(VERSION) rollup.cjs.config.js
 	$(ROLLUP) -c rollup.cjs.config.js
 	$(PERL) -p0i -e 's#/\*.*?\*/##sg' dist/bundle.js && \
 	$(CAT) src/banner.js dist/bundle.js | $(SED) -e '/^\s*$$/d' > dist/cjs.js
