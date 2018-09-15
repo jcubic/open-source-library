@@ -12,7 +12,12 @@ import bar from './bar';
 
 var version = '{{VER}}';
 
+var baz = async function() {
+    return await fetch("https://jcubic.pl");
+};
+
 export {
+    baz,
     version,
     foo,
     bar

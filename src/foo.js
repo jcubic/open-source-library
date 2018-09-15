@@ -5,6 +5,7 @@
  * Released under the MIT license
  *
  */
+
 function foo(arg) {
     return arg === undefined ? 'foo' : arg + ' foo';
 }

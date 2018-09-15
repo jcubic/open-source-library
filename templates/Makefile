@@ -22,8 +22,8 @@ PERL=/usr/bin/env perl
 
 ALL: Makefile .$(VERSION) dist/lib.js dist/lib.min.js README.md package.json
 
-dist/lib.js: src/main.js .$(VERSION)
-	$(ROLLUP) src/main.js -f umd --name 'lib' --o dist/bundle.js
+dist/lib.js: src/main.js .$(VERSION) rollup.config.js
+	$(ROLLUP) -c
 	$(BABEL) dist/bundle.js > dist/babel.js
 	$(PERL) -p0i -e 's#/\*.*?\*/##sg' dist/babel.js
 	$(CAT) src/banner.js dist/babel.js | $(SED) -e '/^\s*$$/d' > dist/lib.js

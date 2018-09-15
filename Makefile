@@ -1,6 +1,6 @@
 .PHONY: publish test coveralls lint
 
-VERSION=0.2.0
+VERSION=0.3.0
 BRANCH=`git branch | grep '^*' | sed 's/* //'`
 DATE=`date -uR`
 SPEC_CHECKSUM=`md5sum spec/lib.spec.js | cut -d' ' -f 1`
@@ -22,8 +22,8 @@ PERL=/usr/bin/env perl
 
 ALL: Makefile .$(VERSION) dist/lib.js dist/lib.min.js README.md package.json
 
-dist/lib.js: src/main.js .$(VERSION)
-	$(ROLLUP) src/main.js -f umd --name 'lib' --o dist/bundle.js
+dist/lib.js: src/main.js .$(VERSION) rollup.config.js
+	$(ROLLUP) -c
 	$(BABEL) dist/bundle.js > dist/babel.js
 	$(PERL) -p0i -e 's#/\*.*?\*/##sg' dist/babel.js
 	$(CAT) src/banner.js dist/babel.js | $(SED) -e '/^\s*$$/d' > dist/lib.js
