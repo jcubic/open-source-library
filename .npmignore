@@ -1,4 +1,7 @@
 spec
+\#*#
+.*
+rollup.config.js
 *~
 Makefile
 jest.config.js

@@ -2,7 +2,7 @@
   "name": "open-source-library",
   "version": "{{VER}}",
   "description": "Template for Open Source JavaScript Library",
-  "main": "dist/lib.min.js",
+  "main": "src/main.js",
   "scripts": {
     "test": "jest"
   },
