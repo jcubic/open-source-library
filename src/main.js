@@ -9,16 +9,8 @@
 
 import foo from './foo';
 import bar from './bar';
-
+import baz from './baz';
 var version = '{{VER}}';
-
-var baz = async function() {
-    return new Promise(function(resolve) {
-        setTimeout(function() {
-            resolve("Hello, World!");
-        }, 1000);
-    });
-};
 
 export {
     baz,

@@ -4,10 +4,16 @@
  * Copyright (c) 2018 Jakub Jankiewicz <https://jcubic.pl/me>
  * Released under the MIT license
  *
- * build: Sat, 15 Sep 2018 09:07:36 +0000
+ * build: Sat, 15 Sep 2018 09:13:37 +0000
  */
 var lib = (function (exports) {
 'use strict';
+function foo(arg) {
+  return arg === undefined ? 'foo' : arg + ' foo';
+}
+function bar(arg) {
+  return arg === undefined ? ['bar'] : [arg, 'bar'];
+}
 function createCommonjsModule(fn, module) {
 	return module = { exports: {} }, fn(module, module.exports), module.exports;
 }
@@ -649,13 +655,6 @@ function _asyncToGenerator(fn) {
   };
 }
 var asyncToGenerator = _asyncToGenerator;
-function foo(arg) {
-  return arg === undefined ? 'foo' : arg + ' foo';
-}
-function bar(arg) {
-  return arg === undefined ? ['bar'] : [arg, 'bar'];
-}
-var version = '0.3.0';
 var baz =
 function () {
   var _ref = asyncToGenerator(
@@ -680,6 +679,7 @@ function () {
     return _ref.apply(this, arguments);
   };
 }();
+var version = '0.3.0';
 exports.baz = baz;
 exports.version = version;
 exports.foo = foo;

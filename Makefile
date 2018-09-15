@@ -59,4 +59,4 @@ coveralls:
 	$(CAT) ./coverage/lcov.info | $(COVERALLS)
 
 lint:
-	$(ESLINT) src/lib.js spec/lib.spec.js
+	$(ESLINT) src/main.js src/foo.js src/bar.js src/baz.js spec/lib.spec.js
