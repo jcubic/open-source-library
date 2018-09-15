@@ -18,8 +18,20 @@ JEST=./node_modules/.bin/jest
 UGLIFY=./node_modules/.bin/uglifyjs
 ROLLUP=./node_modules/.bin/rollup
 PERL=/usr/bin/env perl
+BUNDLE=$()
 
-ALL: Makefile .$(VERSION) dist/lib.js dist/lib.min.js README.md package.json
+ALL: Makefile .$(VERSION) dist/lib.js dist/cjs.js dist/lib.min.js README.md package.json
+
+
+
+dist/cjs.js: src/main.js .$(VERSION) rollup.config.js
+	$(ROLLUP) -c rollup.cjs.config.js
+	$(PERL) -p0i -e 's#/\*.*?\*/##sg' dist/bundle.js && \
+	$(CAT) src/banner.js dist/bundle.js | $(SED) -e '/^\s*$$/d' > dist/cjs.js
+	$(GIT) branch | grep '* devel' > /dev/null && $(SED) -i -e "s/{{VER}}/DEV/g" -e \
+	"s/{{DATE}}/$(DATE)/g" dist/cjs.js || $(SED) -i -e \
+	"s/{{VER}}/$(VERSION)/g" -e "s/{{DATE}}/$(DATE)/g" dist/cjs.js
+	$(RM) dist/bundle.js
 
 dist/lib.js: src/main.js .$(VERSION) rollup.config.js
 	$(ROLLUP) -c

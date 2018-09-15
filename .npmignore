@@ -1,9 +1,10 @@
 spec
 \#*#
 .*
-rollup.config.js
+rollup.*
 *~
 Makefile
+src/banner.js
 jest.config.js
 coverage
 templates
