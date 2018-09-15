@@ -16,7 +16,6 @@ ESLINT=./node_modules/.bin/eslint
 COVERALLS=./node_modules/.bin/coveralls
 JEST=./node_modules/.bin/jest
 UGLIFY=./node_modules/.bin/uglifyjs
-BABEL=./node_modules/.bin/babel
 ROLLUP=./node_modules/.bin/rollup
 PERL=/usr/bin/env perl
 
@@ -24,13 +23,12 @@ ALL: Makefile .$(VERSION) dist/lib.js dist/lib.min.js README.md package.json
 
 dist/lib.js: src/main.js .$(VERSION) rollup.config.js
 	$(ROLLUP) -c
-	$(BABEL) dist/bundle.js > dist/babel.js
-	$(PERL) -p0i -e 's#/\*.*?\*/##sg' dist/babel.js
-	$(CAT) src/banner.js dist/babel.js | $(SED) -e '/^\s*$$/d' > dist/lib.js
+	$(PERL) -p0i -e 's#/\*.*?\*/##sg' dist/bundle.js
+	$(CAT) src/banner.js dist/bundle.js | $(SED) -e '/^\s*$$/d' > dist/lib.js
 	$(GIT) branch | grep '* devel' > /dev/null && $(SED) -i -e "s/{{VER}}/DEV/g" -e \
 	"s/{{DATE}}/$(DATE)/g" dist/lib.js || $(SED) -i -e \
 	"s/{{VER}}/$(VERSION)/g" -e "s/{{DATE}}/$(DATE)/g" dist/lib.js
-	$(RM) dist/bundle.js dist/babel.js
+	$(RM) dist/bundle.js
 
 dist/lib.min.js: dist/lib.js .$(VERSION)
 	$(UGLIFY) -o dist/lib.min.js --comments --mangle -- dist/lib.js
