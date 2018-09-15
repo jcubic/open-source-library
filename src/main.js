@@ -13,7 +13,11 @@ import bar from './bar';
 var version = '{{VER}}';
 
 var baz = async function() {
-    return await fetch("https://jcubic.pl");
+    return new Promise(function(resolve) {
+        setTimeout(function() {
+            resolve("Hello, World!");
+        }, 1000);
+    });
 };
 
 export {

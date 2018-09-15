@@ -7,7 +7,7 @@
  */
 /* global require, expect, describe, it */
 
-import {foo, bar} from '../src/main';
+import {foo, bar, baz} from '../src/main';
 
 describe('foo', function() {
     it('should return string "foo"', function() {
@@ -25,5 +25,12 @@ describe('bar', function() {
     it('should return array with two elements: argument and "bar"', function() {
         expect(bar('lorem')).toEqual(['lorem', 'bar']);
         expect(bar('ipsum')).toEqual(['ipsum', 'bar']);
+    });
+});
+describe('baz', function() {
+    it('should resolve promise', function() {
+        return baz().then(function(result) {
+            expect(result).toEqual("Hello, World!");
+        });
     });
 });
