@@ -1,10 +1,10 @@
 /**@license
- * Open Source Library - version 0.3.2
+ * Open Source Library - version 0.3.3
  *
  * Copyright (c) 2018 Jakub Jankiewicz <https://jcubic.pl/me>
  * Released under the MIT license
  *
- * build: Sat, 15 Sep 2018 14:02:51 +0000
+ * build: Mon, 17 Dec 2018 13:27:57 +0000
  */
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
@@ -21,7 +21,7 @@ var baz = async function() {
         }, 1000);
     });
 };
-var version = '0.3.2';
+var version = '0.3.3';
 exports.baz = baz;
 exports.version = version;
 exports.foo = foo;
