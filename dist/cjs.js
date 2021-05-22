@@ -4,7 +4,7 @@
  * Copyright (c) 2018 Jakub T. Jankiewicz <https://jcubic.pl/me>
  * Released under the MIT license
  *
- * build: Sun, 30 Dec 2018 18:02:45 +0000
+ * build: Sat, 22 May 2021 11:56:59 +0000
  */
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
