@@ -7,6 +7,9 @@
  */
 /* global require, expect, describe, it */
 
+import "core-js/stable";
+import "regenerator-runtime/runtime";
+
 import {foo, bar, baz} from '../src/main';
 
 describe('foo', function() {
